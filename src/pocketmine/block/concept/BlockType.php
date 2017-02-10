@@ -38,6 +38,10 @@ class BlockType{
 		//TODO: init blocks
 	}
 
+	public static function get(int $id, int $meta = 0){
+		return null; //TODO
+	}
+
 	protected $uniqueName;
 	protected $translationKey;
 	protected $fallbackName;
@@ -188,7 +192,7 @@ class BlockType{
 	 *
 	 * @return bool if any changes were made.
 	 */
-	public function onInteract(Position $blockPos, Item $item, int $face, float $fx, float $fy, float $fz, Entity $source = null) : bool{
+	public function onRightClick(Position $blockPos, Item $item, int $face, float $fx, float $fy, float $fz, Entity $source = null) : bool{
 		return false;
 	}
 
@@ -205,7 +209,7 @@ class BlockType{
 	 *
 	 * @return bool if any changes were made.
 	 */
-	public function onStartBreak(Position $blockPos, Item $item, int $face, float $fx, float $fy, float $fz, Entity $source = null) : bool{
+	public function onLeftClick(Position $blockPos, Item $item, int $face, float $fx, float $fy, float $fz, Entity $source = null) : bool{
 		return false;
 	}
 
